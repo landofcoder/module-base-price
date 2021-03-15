@@ -1,0 +1,31 @@
+{
+  "name": "landofcoder/module-baseprice",
+  "description": "This module displays base prices",
+  "require": {},
+  "type": "magento2-module",
+  "version": "1.0.4",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "keywords": [
+      "landofcoder",
+      "landofcoder base price",
+      "magento 2 base price extension"
+  ],
+  "authors": [
+      {
+          "name": "Lof",
+          "email": "landofcoder@gmail.com",
+          "role": "Magento 2 Lof Base Price"
+      }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Lof\\BasePrice\\": ""
+    }
+  }
+}

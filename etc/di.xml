@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ */
+
+/**
+ * @category   Lof
+ * @package    Lof_BasePrice
+ * @subpackage etc
+ * @author     Landofcoder <landofcoder@gmail.com>
+ * @copyright  Copyright (c) 2020 Landofcoder (https://landofcoder.com)
+ * @link       https://landofcoder.com
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\Pricing\Render">
+        <plugin name="lof_baseprice_priceRender" type="Lof\BasePrice\Model\Plugin\AfterPrice" />
+    </type>
+    <type name="Magento\ConfigurableProduct\Block\Product\View\Type\Configurable">
+        <plugin name="lof_baseprice_configurablePriceRender" type="Lof\BasePrice\Model\Plugin\ConfigurablePrice" />
+    </type>
+    <preference for="Magento\GroupedProduct\Model\Product\Type\Grouped" type="Lof\BasePrice\Model\Plugin\Grouped"/>
+</config>
